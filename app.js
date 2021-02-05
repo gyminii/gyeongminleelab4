@@ -1,7 +1,7 @@
 const http = require('http');
 const url = require('url');
 const {getDate} = require('./modules/utils');
-const port = 12345
+const port = process.env.PORT || 12345;
 
 const server = http.createServer((req, res)=> {
     res.writeHead(200, {'Content-type': 'text/plain'});
@@ -23,5 +23,5 @@ const server = http.createServer((req, res)=> {
 })
 
 server.listen(port, ()=> {
-    console.log(`listening at port ${8080}`);
+    console.log(`listening at port ${12345}`);
 });
